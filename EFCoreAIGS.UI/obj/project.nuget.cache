@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "BSQzJQGZf2Z6LiX7LG7NM8wNyfhl5XNEeJ3c6lNqzZ5NDkgaEQxfe+H3KOd5VC9O/zWisF4D0q1WTrIjLZSqBw==",
+  "success": true,
+  "projectFilePath": "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/EFCoreAIGS.UI.csproj",
+  "expectedPackageFiles": [
+    "/Users/liza/.nuget/packages/microsoft.entityframeworkcore/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.abstractions.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.analyzers.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.relational.7.0.0-preview.4.22229.2.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.caching.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.caching.memory/7.0.0-preview.4.22229.4/microsoft.extensions.caching.memory.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.configuration.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0-preview.4.22229.4/microsoft.extensions.dependencyinjection.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.logging/7.0.0-preview.4.22229.4/microsoft.extensions.logging.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.logging.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.options/7.0.0-preview.4.22229.4/microsoft.extensions.options.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.primitives/7.0.0-preview.4.22229.4/microsoft.extensions.primitives.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/npgsql/7.0.0-preview.4/npgsql.7.0.0-preview.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.0-preview.4/npgsql.entityframeworkcore.postgresql.7.0.0-preview.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

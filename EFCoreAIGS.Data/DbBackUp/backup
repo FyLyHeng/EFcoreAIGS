@@ -1,0 +1,32 @@
+﻿CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+
+START TRANSACTION;
+
+CREATE TABLE "Employees" (
+    "EmployeeId" serial NOT NULL,
+    "FirstName" text NULL,
+    "LastName" text NULL,
+    "Hired" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_Employees" PRIMARY KEY ("EmployeeId")
+);
+
+CREATE TABLE "SpendingDetails" (
+    "SpendingDetailId" serial NOT NULL,
+    "SpentOn" text NULL,
+    "Amount" numeric NOT NULL,
+    "EmployeeId" integer NOT NULL,
+    CONSTRAINT "PK_SpendingDetails" PRIMARY KEY ("SpendingDetailId"),
+    CONSTRAINT "FK_SpendingDetails_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("EmployeeId") ON DELETE CASCADE
+);
+
+CREATE INDEX "IX_SpendingDetails_EmployeeId" ON "SpendingDetails" ("EmployeeId");
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220512102206_Initial', '7.0.0-preview.4.22229.2');
+
+COMMIT;
+
