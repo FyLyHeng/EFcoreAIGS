@@ -1,17 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using EFCoreAIGS.Data.Entities.command;
 
 namespace EFCoreAIGS.Data.Entities
 {
-    public class Employee
+    public class Employee : BaseEntity
     {
    
         public Employee()
         {
             SpendingDetails = new List<SpendingDetails>();
         }
-        [Key]
-        public int EmployeeId { get; set; }
+        // [Key]
+        // public int EmployeeId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime Hired { get; set; }

@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using EFCoreAIGS.Data.Entities.command;
 
 
 namespace EFCoreAIGS.Data.Entities
 {
-    public class SpendingDetails
+    public class SpendingDetails : BaseEntity
     {
-        [Key]
-        public int SpendingDetailId { get; set; }
+        // [Key]
+        // public int SpendingDetailId { get; set; }
         public string SpentOn { get; set; }
         public decimal Amount { get; set; }
         

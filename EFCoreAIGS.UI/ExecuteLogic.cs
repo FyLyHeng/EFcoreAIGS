@@ -99,7 +99,7 @@ namespace EFCoreAIGS.UI
         
             var empList = db.Employees
                 .Where(x => x.FirstName != "")
-                .OrderByDescending(x => x.EmployeeId)
+                .OrderByDescending(x => x.Id)
                 .ToList();
         
         
@@ -202,7 +202,7 @@ namespace EFCoreAIGS.UI
             var ids = new List<int>{41,42};
             var emps = await repo.Employees.AsNoTracking()
                 .Where(q => q.FirstName.Contains("liza"))
-                .Where(q=> ids.Contains(q.EmployeeId))
+                .Where(q=> ids.Contains(q.Id))
                 .OrderByDescending(q=> q.Hired)
                 .ToListAsync();
             
@@ -244,7 +244,7 @@ namespace EFCoreAIGS.UI
             var emp = repo.Employees
                 .Include(q => 
                     q.SpendingDetails.Where(d=> d.Amount>100))
-                .Single(q => q.EmployeeId == employeeId);
+                .Single(q => q.Id == employeeId);
             
             emp.FirstName = "child has been remove";
             emp.SpendingDetails.Remove(emp.SpendingDetails.First());
@@ -259,7 +259,7 @@ namespace EFCoreAIGS.UI
 
         private void CRUD_Update_Add_Child(int id)
         {
-            var emp = repo.Employees.Single(q => q.EmployeeId == id);
+            var emp = repo.Employees.Single(q => q.Id == id);
             emp.SpendingDetails.Add(new SpendingDetails { SpentOn = "Coffee", Amount = 1001 });
             repo.Update(emp);
             repo.SaveChanges();
