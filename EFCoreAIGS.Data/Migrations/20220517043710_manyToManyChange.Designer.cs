@@ -3,6 +3,7 @@ using System;
 using EFCoreAIGS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EFCoreAIGS.Data.Migrations
 {
     [DbContext(typeof(AIGSContext))]
-    partial class AIGSContextModelSnapshot : ModelSnapshot
+    [Migration("20220517043710_manyToManyChange")]
+    partial class manyToManyChange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,37 +24,6 @@ namespace EFCoreAIGS.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseSerialColumns(modelBuilder);
-
-            modelBuilder.Entity("EFCoreAIGS.Data.Entities.CreditCard", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
-
-                    b.Property<double>("Balance")
-                        .HasColumnType("double precision");
-
-                    b.Property<string>("CreditCardNumber")
-                        .HasColumnType("text");
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("integer");
-
-                    b.Property<double>("TotalIncomeAmount")
-                        .HasColumnType("double precision");
-
-                    b.Property<double>("TotalOutcomeAmount")
-                        .HasColumnType("double precision");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EmployeeId")
-                        .IsUnique();
-
-                    b.ToTable("CreditCard");
-                });
 
             modelBuilder.Entity("EFCoreAIGS.Data.Entities.Employee", b =>
                 {
@@ -62,14 +34,12 @@ namespace EFCoreAIGS.Data.Migrations
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Hired")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -111,7 +81,7 @@ namespace EFCoreAIGS.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal?>("Amount")
+                    b.Property<decimal>("Amount")
                         .HasColumnType("numeric");
 
                     b.Property<int>("EmployeeId")
@@ -127,27 +97,19 @@ namespace EFCoreAIGS.Data.Migrations
                     b.ToTable("SpendingDetails");
                 });
 
-            modelBuilder.Entity("EFCoreAIGS.Data.Entities.CreditCard", b =>
-                {
-                    b.HasOne("EFCoreAIGS.Data.Entities.Employee", "Employee")
-                        .WithOne("CreditCard")
-                        .HasForeignKey("EFCoreAIGS.Data.Entities.CreditCard", "EmployeeId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.Navigation("Employee");
-                });
-
             modelBuilder.Entity("EFCoreAIGS.Data.Entities.Spend", b =>
                 {
                     b.HasOne("EFCoreAIGS.Data.Entities.SpendingDetails", "IncomeSpendingDetails")
                         .WithMany("IncomeSpend")
                         .HasForeignKey("IncomeSpendingDetailsId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("EFCoreAIGS.Data.Entities.SpendingDetails", "OutcomeSpendingDetails")
                         .WithMany("OutcomeSpend")
                         .HasForeignKey("OutcomeSpendingDetailsId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("IncomeSpendingDetails");
 
@@ -167,8 +129,6 @@ namespace EFCoreAIGS.Data.Migrations
 
             modelBuilder.Entity("EFCoreAIGS.Data.Entities.Employee", b =>
                 {
-                    b.Navigation("CreditCard");
-
                     b.Navigation("SpendingDetails");
                 });
 

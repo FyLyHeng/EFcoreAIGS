@@ -30,10 +30,11 @@ namespace EFCoreAIGS.UI
             //await CRUD_Add();
             //await CRUD_Save();
             
-            CRUD_Get(41);
+            //CRUD_Get(41);
 
             //CRUD_List();
-            CURD_Filter();
+            //CURD_Filter();
+            CRUD_Filter_Child();
             // CURD_Filter_EF_Fun();
             // CRUD_Filter_LINQ();
             
@@ -42,9 +43,8 @@ namespace EFCoreAIGS.UI
             //CRUD_Update_Add_Child(41);
             //CRUD_Update(41);
 
-            CRUD_Delete();
+            //CRUD_Delete();
         }
-        
         
         private void AddRangeEmployee()
         {
@@ -150,7 +150,6 @@ namespace EFCoreAIGS.UI
             };
             await repo.AddRangeAsync(spanding);
         }
-        
         //save child and parent in one
         private async Task CRUD_Save()
         {
@@ -196,6 +195,8 @@ namespace EFCoreAIGS.UI
             }
         }
         
+        
+        //Filter by Parent Column
         private async Task CURD_Filter()
         {
             var name = "liza";
@@ -210,6 +211,19 @@ namespace EFCoreAIGS.UI
             foreach (var emp in emps)
             {
                 Console.WriteLine($"Emp {emp.FirstName} {emp.Hired}");
+            }
+        }
+        
+        //Filter by Child Column
+        private void CRUD_Filter_Child()
+        {
+            var emp = repo.Employees
+                .Include(q=>q.SpendingDetails)
+                .Where(q => q.SpendingDetails != null && q.SpendingDetails.Any(x => x.Amount >= 100));
+
+            foreach (var employee in emp)
+            {
+                Console.WriteLine($"## EMP:: {employee.FirstName} | {employee.SpendingDetails.Sum(s=>s.Amount)}");
             }
         }
         
@@ -243,7 +257,7 @@ namespace EFCoreAIGS.UI
         {
             var emp = repo.Employees
                 .Include(q => 
-                    q.SpendingDetails.Where(d=> d.Amount>100))
+                    q.SpendingDetails!.Where(d=> d.Amount>100))
                 .Single(q => q.Id == employeeId);
             
             emp.FirstName = "child has been remove";

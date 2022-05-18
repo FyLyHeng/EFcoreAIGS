@@ -9,3 +9,5 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 Console.WriteLine("Hello, World!");
 //new ExecuteLogic().Execute();
 new ExecuteLogic().ExecuteAsync();
+
+// new ExecuteLogicDBRelationship().ExecuteLogic();

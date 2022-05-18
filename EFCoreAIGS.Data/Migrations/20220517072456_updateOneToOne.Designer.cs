@@ -3,6 +3,7 @@ using System;
 using EFCoreAIGS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EFCoreAIGS.Data.Migrations
 {
     [DbContext(typeof(AIGSContext))]
-    partial class AIGSContextModelSnapshot : ModelSnapshot
+    [Migration("20220517072456_updateOneToOne")]
+    partial class updateOneToOne
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,14 +65,12 @@ namespace EFCoreAIGS.Data.Migrations
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Hired")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -111,7 +112,7 @@ namespace EFCoreAIGS.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal?>("Amount")
+                    b.Property<decimal>("Amount")
                         .HasColumnType("numeric");
 
                     b.Property<int>("EmployeeId")
@@ -142,12 +143,14 @@ namespace EFCoreAIGS.Data.Migrations
                     b.HasOne("EFCoreAIGS.Data.Entities.SpendingDetails", "IncomeSpendingDetails")
                         .WithMany("IncomeSpend")
                         .HasForeignKey("IncomeSpendingDetailsId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("EFCoreAIGS.Data.Entities.SpendingDetails", "OutcomeSpendingDetails")
                         .WithMany("OutcomeSpend")
                         .HasForeignKey("OutcomeSpendingDetailsId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.Navigation("IncomeSpendingDetails");
 
