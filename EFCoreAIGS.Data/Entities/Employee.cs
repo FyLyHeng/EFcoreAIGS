@@ -10,19 +10,19 @@ namespace EFCoreAIGS.Data.Entities
         // {
         //     SpendingDetails = new List<SpendingDetails>();
         // }
-        
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
         public DateTime Hired { get; set; }
-        
-        
-       //Not add this field to Table
+
+
+        //Not add this field to Table
         [NotMapped]
         public decimal TotalSpendings { get; set; }
- 
+
         //One-to-One
         public virtual CreditCard? CreditCard { get; set; }
-        
+
         //One-to-Many
         public List<SpendingDetails>? SpendingDetails { get; set; }
 

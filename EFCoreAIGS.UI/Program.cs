@@ -5,9 +5,12 @@ using EFCoreAIGS.UI;
 
 // for datatime from C# to postgress we need to configure this below because it different format 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+// AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 
 Console.WriteLine("Hello, World!");
-//new ExecuteLogic().Execute();
-new ExecuteLogic().ExecuteAsync();
+// new ExecuteLogic().Execute();
+await new ExecuteLogic().ExecuteAsync();
 
 // new ExecuteLogicDBRelationship().ExecuteLogic();

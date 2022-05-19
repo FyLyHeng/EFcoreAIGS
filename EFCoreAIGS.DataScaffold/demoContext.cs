@@ -13,7 +13,7 @@ namespace EFCoreAIGS.DataScaffold
 
         public demoContext(DbContextOptions<demoContext> options)
             : base(options)
-        { 
+        {
         }
 
         public virtual DbSet<Account> Accounts { get; set; } = null!;
