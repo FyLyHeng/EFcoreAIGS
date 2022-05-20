@@ -1,0 +1,14 @@
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/bin/Debug/net6.0/EFCoreAIGS.erp.deps.json
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/bin/Debug/net6.0/EFCoreAIGS.erp.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/bin/Debug/net6.0/EFCoreAIGS.erp.pdb
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.csproj.AssemblyReference.cache
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.AssemblyInfoInputs.cache
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.AssemblyInfo.cs
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.csproj.CoreCompileInputs.cache
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/refint/EFCoreAIGS.erp.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.pdb
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/ref/EFCoreAIGS.erp.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/bin/Debug/net6.0/EFCoreAIGS.erp.runtimeconfig.json
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/obj/Debug/net6.0/EFCoreAIGS.erp.genruntimeconfig.cache

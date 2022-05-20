@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BSQzJQGZf2Z6LiX7LG7NM8wNyfhl5XNEeJ3c6lNqzZ5NDkgaEQxfe+H3KOd5VC9O/zWisF4D0q1WTrIjLZSqBw==",
+  "dgSpecHash": "n3gq87RJ+BWsTTjIcx8Dh8Wp1+wWRbiEJhWDpW7fJ6tl73jqjW+yHgoKWByxlHvJTMW4HzhDhs44XaeGsAojsw==",
   "success": true,
   "projectFilePath": "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/EFCoreAIGS.UI.csproj",
   "expectedPackageFiles": [
+    "/Users/liza/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.entityframeworkcore/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.7.0.0-preview.4.22229.2.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.abstractions.7.0.0-preview.4.22229.2.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.analyzers.7.0.0-preview.4.22229.2.nupkg.sha512",

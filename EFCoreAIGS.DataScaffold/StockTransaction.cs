@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace EFCoreAIGS.DataScaffold
+﻿namespace EFCoreAIGS.DataScaffold
 {
     public partial class StockTransaction
     {

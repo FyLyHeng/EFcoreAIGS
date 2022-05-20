@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore/7.0.0-preview.4.22229.2": {
         "type": "package",
         "dependencies": {
@@ -251,10 +260,55 @@
         "runtime": {
           "bin/placeholder/EFCoreAIGS.DataScaffold.dll": {}
         }
+      },
+      "EFCoreAIGS.erp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0-preview.4"
+        },
+        "compile": {
+          "bin/placeholder/EFCoreAIGS.erp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EFCoreAIGS.erp.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/7.0.0-preview.4.22229.2": {
       "sha512": "D+Su2LZsUpBZ2Y1CdSMrJH/azFWbzMTH8tuZUAMsgH9D66leQOoupHDO+18fSC3H1Uhw8KXDIzjqqURFWESzZA==",
       "type": "package",
@@ -662,12 +716,18 @@
       "type": "project",
       "path": "../EFCoreAIGS.DataScaffold/EFCoreAIGS.DataScaffold.csproj",
       "msbuildProject": "../EFCoreAIGS.DataScaffold/EFCoreAIGS.DataScaffold.csproj"
+    },
+    "EFCoreAIGS.erp/1.0.0": {
+      "type": "project",
+      "path": "../EFCoreAIGS.erp/EFCoreAIGS.erp.csproj",
+      "msbuildProject": "../EFCoreAIGS.erp/EFCoreAIGS.erp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "EFCoreAIGS.Data >= 1.0.0",
-      "EFCoreAIGS.DataScaffold >= 1.0.0"
+      "EFCoreAIGS.DataScaffold >= 1.0.0",
+      "EFCoreAIGS.erp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -700,6 +760,9 @@
             },
             "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.DataScaffold/EFCoreAIGS.DataScaffold.csproj": {
               "projectPath": "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.DataScaffold/EFCoreAIGS.DataScaffold.csproj"
+            },
+            "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/EFCoreAIGS.erp.csproj": {
+              "projectPath": "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.erp/EFCoreAIGS.erp.csproj"
             }
           }
         }

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreAIGS.Data", "EFCoreAI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreAIGS.UI", "EFCoreAIGS.UI\EFCoreAIGS.UI.csproj", "{4603E520-3720-4F00-912F-224707CEAC21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreAIGS.DataScaffold", "EFCoreAIGS.DataScaffold\EFCoreAIGS.DataScaffold.csproj", "{259D8218-C6A5-4DC1-8CA3-1A3843952052}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreAIGS.erp", "EFCoreAIGS.erp\EFCoreAIGS.erp.csproj", "{9D346194-1830-437E-89FF-24A73082BCFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{4603E520-3720-4F00-912F-224707CEAC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4603E520-3720-4F00-912F-224707CEAC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4603E520-3720-4F00-912F-224707CEAC21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{259D8218-C6A5-4DC1-8CA3-1A3843952052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{259D8218-C6A5-4DC1-8CA3-1A3843952052}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{259D8218-C6A5-4DC1-8CA3-1A3843952052}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{259D8218-C6A5-4DC1-8CA3-1A3843952052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D346194-1830-437E-89FF-24A73082BCFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D346194-1830-437E-89FF-24A73082BCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D346194-1830-437E-89FF-24A73082BCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D346194-1830-437E-89FF-24A73082BCFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

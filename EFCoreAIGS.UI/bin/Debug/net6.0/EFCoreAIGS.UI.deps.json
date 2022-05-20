@@ -9,10 +9,19 @@
       "EFCoreAIGS.UI/1.0.0": {
         "dependencies": {
           "EFCoreAIGS.Data": "1.0.0",
-          "EFCoreAIGS.DataScaffold": "1.0.0"
+          "EFCoreAIGS.DataScaffold": "1.0.0",
+          "EFCoreAIGS.erp": "1.0.0"
         },
         "runtime": {
           "EFCoreAIGS.UI.dll": {}
+        }
+      },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
         }
       },
       "Microsoft.EntityFrameworkCore/7.0.0-preview.4.22229.2": {
@@ -194,6 +203,15 @@
         "runtime": {
           "EFCoreAIGS.DataScaffold.dll": {}
         }
+      },
+      "EFCoreAIGS.erp/1.0.0": {
+        "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.0-preview.4"
+        },
+        "runtime": {
+          "EFCoreAIGS.erp.dll": {}
+        }
       }
     }
   },
@@ -202,6 +220,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore/7.0.0-preview.4.22229.2": {
       "type": "package",
@@ -321,6 +346,11 @@
       "sha512": ""
     },
     "EFCoreAIGS.DataScaffold/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EFCoreAIGS.erp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

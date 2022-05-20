@@ -8,11 +8,11 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/EFCore</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="demo@localhost" uuid="4765f49d-dbff-4638-8a47-7def73292b95">
+    <data-source source="LOCAL" name="ERP@localhost" uuid="93310c5e-c066-46cf-a853-e2302c8ea1cd">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/demo</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/erp</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
