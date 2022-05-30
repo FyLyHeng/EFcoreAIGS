@@ -8,21 +8,22 @@ namespace EFCoreAIGS.UI
     {
 
         private static AIGSContext repo = new AIGSContext();
-        public ExecuteLogic() {}
 
         internal void Execute()
         {
 
             //Add 1 new Employee to DataBase
-            addnewEmployee("liza", "Kok");
+            //addnewEmployee("liza", "Kok");
 
             //Add multi Employee to DataBase
-            AddRangeEmployee();
+            //AddRangeEmployee();
 
             //write to console Log
-            ReadAllEmployee();
+            //ReadAllEmployee();
 
-            FilterAndOrderEmployee();
+            //FilterAndOrderEmployee();
+            
+            update(new Employee{Id = 75});
         }
 
         internal async Task ExecuteAsync()
@@ -78,7 +79,7 @@ namespace EFCoreAIGS.UI
                 Hired = DateTime.Now
             };
             using var db = new AIGSContext();
-            db.Employees?.Add(emp);
+            db.Employees.Add(emp);
             db.SaveChanges();
         }
         private void ReadAllEmployee()
@@ -254,6 +255,14 @@ namespace EFCoreAIGS.UI
 
 
         //============== Update OPERATION ==============
+
+        private void update(Employee employee)
+        {
+            var emp = repo.Employees.First(q => q.Id == employee.Id);
+            emp.FirstName = "What is version";
+            repo.SaveChanges();
+        }
+        
         private void CRUD_Update(int employeeId)
         {
             var emp = repo.Employees

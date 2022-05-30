@@ -1,4 +1,5 @@
-﻿using EFCoreAIGS.Data.Configuration.EntityConfig;
+﻿using EFCoreAIGS.Data.Configuration.AppConfig;
+using EFCoreAIGS.Data.Configuration.EntityConfig;
 using EFCoreAIGS.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

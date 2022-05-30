@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using EFCoreAIGS.Data.Entities.command;
+using EFCoreAIGS.Data.Entities.Validation;
 
 namespace EFCoreAIGS.Data.Entities
 {
@@ -18,6 +19,7 @@ namespace EFCoreAIGS.Data.Entities
         public decimal TotalSpendings { get; set; }
 
         //One-to-One
+        [EmployeeValidation] //Inject custom validation stand for if else in bus logic code.
         public virtual CreditCard? CreditCard { get; set; }
 
         //One-to-Many

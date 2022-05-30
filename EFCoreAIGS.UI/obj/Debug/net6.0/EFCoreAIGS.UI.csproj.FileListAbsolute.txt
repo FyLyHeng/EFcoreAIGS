@@ -67,3 +67,13 @@ E:/Project/test/EFcoreAIGS/EFCoreAIGS.UI/obj/Debug/net6.0/EFCoreAIGS.UI.csproj.C
 /Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/EFCoreAIGS.erp.dll
 /Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/EFCoreAIGS.erp.pdb
 /Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/BCrypt.Net-Next.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Json.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/System.Text.Encodings.Web.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/System.Text.Json.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Binder.dll

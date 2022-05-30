@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n3gq87RJ+BWsTTjIcx8Dh8Wp1+wWRbiEJhWDpW7fJ6tl73jqjW+yHgoKWByxlHvJTMW4HzhDhs44XaeGsAojsw==",
+  "dgSpecHash": "V3v+SNiUCLv7rtXCcXwXa5GA5DzyI2ElIh+Tpo+pFk+PACv36BycuBRkYi5FBY5jg3kk/fmV+9nXMRnKgl9O6A==",
   "success": true,
   "projectFilePath": "/Users/liza/Documents/Project_sample/EFcoreAIGS/EFCoreAIGS.UI/EFCoreAIGS.UI.csproj",
   "expectedPackageFiles": [
@@ -11,16 +11,25 @@
     "/Users/liza/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.0-preview.4.22229.2/microsoft.entityframeworkcore.relational.7.0.0-preview.4.22229.2.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.caching.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.caching.memory/7.0.0-preview.4.22229.4/microsoft.extensions.caching.memory.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.configuration/7.0.0-preview.4.22229.4/microsoft.extensions.configuration.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.configuration.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.configuration.binder/7.0.0-preview.4.22229.4/microsoft.extensions.configuration.binder.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.configuration.fileextensions/7.0.0-preview.4.22229.4/microsoft.extensions.configuration.fileextensions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.configuration.json/7.0.0-preview.4.22229.4/microsoft.extensions.configuration.json.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0-preview.4.22229.4/microsoft.extensions.dependencyinjection.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.fileproviders.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.fileproviders.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.fileproviders.physical/7.0.0-preview.4.22229.4/microsoft.extensions.fileproviders.physical.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/microsoft.extensions.filesystemglobbing/7.0.0-preview.4.22229.4/microsoft.extensions.filesystemglobbing.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.logging/7.0.0-preview.4.22229.4/microsoft.extensions.logging.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0-preview.4.22229.4/microsoft.extensions.logging.abstractions.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.options/7.0.0-preview.4.22229.4/microsoft.extensions.options.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/microsoft.extensions.primitives/7.0.0-preview.4.22229.4/microsoft.extensions.primitives.7.0.0-preview.4.22229.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/npgsql/7.0.0-preview.4/npgsql.7.0.0-preview.4.nupkg.sha512",
     "/Users/liza/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.0-preview.4/npgsql.entityframeworkcore.postgresql.7.0.0-preview.4.nupkg.sha512",
-    "/Users/liza/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "/Users/liza/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/liza/.nuget/packages/system.text.encodings.web/7.0.0-preview.4.22229.4/system.text.encodings.web.7.0.0-preview.4.22229.4.nupkg.sha512",
+    "/Users/liza/.nuget/packages/system.text.json/7.0.0-preview.4.22229.4/system.text.json.7.0.0-preview.4.22229.4.nupkg.sha512"
   ],
   "logs": []
 }

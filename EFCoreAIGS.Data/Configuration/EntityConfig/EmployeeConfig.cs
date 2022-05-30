@@ -10,6 +10,8 @@ namespace EFCoreAIGS.Data.Configuration.EntityConfig
         {
 
             builder.HasIndex(q => q.Id).IsUnique();
+            builder.Property(e => e.Version).HasColumnName("version").IsRowVersion().HasConversion<int>();
+
 
             // builder.Property(q => new
             // {

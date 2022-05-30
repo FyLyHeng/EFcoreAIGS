@@ -9,7 +9,5 @@ namespace EFCoreAIGS.Data.Entities
 
         public int OutcomeSpendingDetailsId { get; set; }
         public virtual SpendingDetails? OutcomeSpendingDetails { get; set; }
-
-        public DateTime Date { get; set; }
     }
 }

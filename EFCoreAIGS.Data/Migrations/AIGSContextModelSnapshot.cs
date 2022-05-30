@@ -57,6 +57,11 @@ namespace EFCoreAIGS.Data.Migrations
                     b.Property<double>("TotalOutcomeAmount")
                         .HasColumnType("double precision");
 
+                    b.Property<long>("Version")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EmployeeId")
@@ -80,7 +85,8 @@ namespace EFCoreAIGS.Data.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<DateTime>("Hired")
                         .HasColumnType("timestamp with time zone");
@@ -93,6 +99,12 @@ namespace EFCoreAIGS.Data.Migrations
 
                     b.Property<DateTime?>("LastUpdateDate")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Version")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("integer")
+                        .HasColumnName("version");
 
                     b.HasKey("Id");
 
@@ -107,7 +119,8 @@ namespace EFCoreAIGS.Data.Migrations
                             Id = 1,
                             FirstName = "default first name",
                             Hired = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastName = "default last name"
+                            LastName = "default last name",
+                            Version = 0
                         });
                 });
 
@@ -125,9 +138,6 @@ namespace EFCoreAIGS.Data.Migrations
                     b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<int>("IncomeSpendingDetailsId")
                         .HasColumnType("integer");
 
@@ -139,6 +149,11 @@ namespace EFCoreAIGS.Data.Migrations
 
                     b.Property<int>("OutcomeSpendingDetailsId")
                         .HasColumnType("integer");
+
+                    b.Property<long>("Version")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -177,6 +192,11 @@ namespace EFCoreAIGS.Data.Migrations
 
                     b.Property<string>("SpentOn")
                         .HasColumnType("text");
+
+                    b.Property<long>("Version")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
