@@ -13,7 +13,7 @@ namespace EFCoreAIGS.UI
         {
 
             //Add 1 new Employee to DataBase
-            //addnewEmployee("liza", "Kok");
+            addnewEmployee("liza", "Kok");
 
             //Add multi Employee to DataBase
             //AddRangeEmployee();
@@ -23,7 +23,7 @@ namespace EFCoreAIGS.UI
 
             //FilterAndOrderEmployee();
             
-            update(new Employee{Id = 75});
+            //update(new Employee{Id = 75});
         }
 
         internal async Task ExecuteAsync()
@@ -204,7 +204,7 @@ namespace EFCoreAIGS.UI
             var name = "liza";
             var ids = new List<int> {41, 42};
             var emps = await repo.Employees.AsNoTracking()
-                .Where(q => q.FirstName.Contains("liza"))
+                .Where(q => q.FirstName!.Contains("liza"))
                 .Where(q => ids.Contains(q.Id))
                 .OrderByDescending(q => q.Hired)
                 .ToListAsync();
