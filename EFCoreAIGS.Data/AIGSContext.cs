@@ -22,7 +22,8 @@ namespace EFCoreAIGS.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseNpgsql(@$"{AppConfiguration.ConnectionString}")
+                //.UseNpgsql(@$"{AppConfiguration.ConnectionString}")
+                .UseNpgsql(@"Host=localhost;Username=postgres;Password=P@ssw0rd;Database=EFCore")
                 .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name}, LogLevel.Information)
                 .EnableSensitiveDataLogging();
         }

@@ -4,7 +4,7 @@ namespace EFCoreAIGS.Data.Configuration.AppConfig
 {
     public class AppConfiguration
     {
-        public readonly static string ConnectionString;
+        public readonly static string ConnectionString = "";
 
         static AppConfiguration()
         {
