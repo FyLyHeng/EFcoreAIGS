@@ -1,8 +1,6 @@
 using System.Linq.Expressions;
-using EFCoreAIGS.Data.Entities;
 using EFCoreAIGS.Data.Entities.command;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
 
 namespace EFCoreAIGS.Data.Base
 {
