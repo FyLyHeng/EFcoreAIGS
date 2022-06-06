@@ -1,11 +1,14 @@
 ﻿#nullable enable
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using EFCoreAIGS.Data.Configuration.EntityConfig;
 using EFCoreAIGS.Data.Entities.command;
 using EFCoreAIGS.Data.Entities.Validation;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreAIGS.Data.Entities
 {
+    [EntityTypeConfiguration(typeof(EmployeeConfig))]
     public class Employee : BaseEntity
     {
         [MaxLength(50)]

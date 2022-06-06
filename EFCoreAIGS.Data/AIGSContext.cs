@@ -33,7 +33,7 @@ namespace EFCoreAIGS.Data
             modelBuilder.UseSerialColumns();
             modelBuilder.ApplyConfiguration(new CreditCardConfig());
             modelBuilder.ApplyConfiguration(new SpendDetailCinfig());
-            modelBuilder.ApplyConfiguration(new EmployeeConfig());
+            // modelBuilder.ApplyConfiguration(new EmployeeConfig());
         }
     }
 }
