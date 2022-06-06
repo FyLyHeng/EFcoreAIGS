@@ -2,16 +2,23 @@
 using EFCoreAIGS.Data.Configuration.EntityConfig;
 using EFCoreAIGS.Data.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace EFCoreAIGS.Data
 {
     public class AIGSContext : AuditConfig
     {
+
+        private static IConfigurationRoot _configuration;        
         public AIGSContext()
         {
             AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
             //AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
+        }
+
+        public AIGSContext(DbContextOptions<AIGSContext> options) : base(options)
+        {
         }
         
         public DbSet<Employee> Employees { get; set; }
@@ -22,8 +29,7 @@ namespace EFCoreAIGS.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                //.UseNpgsql(@$"{AppConfiguration.ConnectionString}")
-                .UseNpgsql(@"Host=localhost;Username=postgres;Password=P@ssw0rd;Database=EFCore")
+                .UseNpgsql(@$"{AppConfiguration.ConnectionString}")
                 .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name}, LogLevel.Information)
                 .EnableSensitiveDataLogging();
 

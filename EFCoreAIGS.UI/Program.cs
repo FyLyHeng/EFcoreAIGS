@@ -1,10 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using System.Runtime.InteropServices;
+using EFCoreAIGS.Data;
+using EFCoreAIGS.Data.Configuration.AppConfig;
 using EFCoreAIGS.Data.Service;
 using EFCoreAIGS.erp.Entites;
 using EFCoreAIGS.erp.Service;
 using EFCoreAIGS.UI;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+//
+// IConfigurationRoot conn;
+// DbContextOptionsBuilder<AIGSContext> builder;
+//
+// conn = AppConfiguration.ConnectionString;
+// builder = new DbContextOptionsBuilder<AIGSContext>();
+// builder.UseNpgsql(@$"{conn.GetSection("ConnectionStrings").GetSection("DataConnection")}");
+//
+
+
 
 Console.WriteLine($"{RuntimeInformation.IsOSPlatform(OSPlatform.OSX)} -- Hello Mac");
 

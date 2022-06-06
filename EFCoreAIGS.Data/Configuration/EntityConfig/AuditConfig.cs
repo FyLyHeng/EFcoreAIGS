@@ -5,6 +5,10 @@ namespace EFCoreAIGS.Data.Configuration.EntityConfig
 {
     public abstract class AuditConfig : DbContext
     {
+        
+        protected AuditConfig (DbContextOptions<AIGSContext> options) : base(options){}
+        protected AuditConfig() {}
+
         //Config Audit Database Add & Update
         public override int SaveChanges()
         {

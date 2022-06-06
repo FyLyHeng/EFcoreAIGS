@@ -2,38 +2,58 @@ using Microsoft.Extensions.Configuration;
 
 namespace EFCoreAIGS.Data.Configuration.AppConfig
 {
-    public class AppConfiguration
+    public static class AppConfiguration
     {
-        public readonly static string ConnectionString = "";
+        public readonly static string ConnectionString;
 
-        static AppConfiguration()
+         static AppConfiguration()
+         {
+             Console.WriteLine("does it work or not");
+             
+             string solutionPath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName);
+             string fileConfigName = "/configuration/appsettings.json";
+             
+             IConfigurationRoot configuration = new ConfigurationBuilder()
+                 .SetBasePath(Directory.GetCurrentDirectory())
+                 .AddJsonFile($"{solutionPath}{fileConfigName}",optional:false)
+                 .Build();
+             ConnectionString = configuration.GetConnectionString("DataConnection")!;
+         }
+        
+        /*private static AppConfiguration _instance ;
+        private static readonly object instanceLock = new object();
+        private static IConfigurationRoot _configuration;
+        
+        private AppConfiguration()
         {
-            Console.WriteLine("does it work or not");
-            string solutionPath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory)!.Parent!.FullName);
-            string projectNameSpace = "EFCoreAIGS.Data";
-            string fileConfigName = "appsettings.json";
-            
-
-            
-            //var path = Environment.CurrentDirectory.Substring(0, Environment.CurrentDirectory.IndexOf("bin"));
-            // var path =  Path.Combine(AppDomain.CurrentDomain.DynamicDirectory);
-            //string s_commonAppData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
-            
-            string filename = @"appsettings.json";
-            string filePath= Path.GetFullPath(filename) ;
-
-
-            Console.WriteLine($"[{filePath}]");
-
-            Console.WriteLine($"{solutionPath}/{projectNameSpace}/{fileConfigName}");
-
-            IConfigurationRoot configuration = new ConfigurationBuilder()
+            var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile($"{filePath}",optional:true)
-                //.AddJsonFile($"{solutionPath}/{projectNameSpace}/{fileConfigName}",optional:true)
-                .Build();
-            
-            ConnectionString = configuration.GetConnectionString("url")!;
+                .AddJsonFile("appsettings.json", optional: true,
+                    reloadOnChange: true);
+            _configuration = builder.Build();
         }
+        
+        public static AppConfiguration Instance
+        {
+            get
+            {
+                lock (instanceLock)
+                {
+                    if (_instance == null)
+                    {
+                        _instance = new AppConfiguration();
+                    }
+                    return _instance;
+                }
+            }
+        }
+        public static IConfigurationRoot ConfigurationRoot
+        {
+            get
+            {
+                if (_configuration == null) { var x = Instance; }
+                return _configuration;
+            }
+        }*/
     }
 }
