@@ -234,7 +234,7 @@ namespace EFCoreAIGS.UI
             var name = "liza";
             var ids = new List<int> {41, 42};
             var emps = repo.Employees.AsNoTracking()
-                .Where(q => EF.Functions.ILike(q.FirstName, $"%{name}%")).ToList();
+                .Where(q => EF.Functions.ILike(q.FirstName, $"%{name}%") && q.Id > 1).ToList();
 
             Console.WriteLine($"Filter list total:: {emps.Count}");
             foreach (var emp in emps)
