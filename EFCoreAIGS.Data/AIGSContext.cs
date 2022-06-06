@@ -26,6 +26,8 @@ namespace EFCoreAIGS.Data
                 .UseNpgsql(@"Host=localhost;Username=postgres;Password=P@ssw0rd;Database=EFCore")
                 .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name}, LogLevel.Information)
                 .EnableSensitiveDataLogging();
+
+            optionsBuilder.UseSnakeCaseNamingConvention();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,6 +36,18 @@ namespace EFCoreAIGS.Data
             modelBuilder.ApplyConfiguration(new CreditCardConfig());
             modelBuilder.ApplyConfiguration(new SpendDetailCinfig());
             // modelBuilder.ApplyConfiguration(new EmployeeConfig());
+            //modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
+
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder.Properties<String>()
+                .HaveMaxLength(255);
+
+            configurationBuilder.Properties<double>()
+                .HavePrecision(10, 3);
+
+            //base.ConfigureConventions(configurationBuilder);
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using EFCoreAIGS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EFCoreAIGS.Data.Migrations
 {
     [DbContext(typeof(AIGSContext))]
-    partial class AIGSContextModelSnapshot : ModelSnapshot
+    [Migration("20220606081733_configNameConvationAndSetdefaultMaxString")]
+    partial class configNameConvationAndSetdefaultMaxString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

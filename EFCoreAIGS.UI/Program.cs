@@ -1,11 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Runtime.InteropServices;
 using EFCoreAIGS.Data.Service;
 using EFCoreAIGS.erp.Entites;
 using EFCoreAIGS.erp.Service;
 using EFCoreAIGS.UI;
 
-
+Console.WriteLine($"{RuntimeInformation.IsOSPlatform(OSPlatform.OSX)} -- Hello Mac");
 
 //new ExecuteLogic().Execute();
 // await new ExecuteLogic().ExecuteAsync();
