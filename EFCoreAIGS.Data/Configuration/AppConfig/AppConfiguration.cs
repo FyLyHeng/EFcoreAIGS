@@ -4,20 +4,28 @@ namespace EFCoreAIGS.Data.Configuration.AppConfig
 {
     public static class AppConfiguration
     {
-        public readonly static string ConnectionString;
+        public readonly static string? ConnectionString;
 
          static AppConfiguration()
          {
              Console.WriteLine("does it work or not");
              
-             string solutionPath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName);
-             string fileConfigName = "/configuration/appsettings.json";
+             // string solutionPath = Path.Combine(Directory.GetParent(Environment.CurrentDirectory)!.Parent!.Parent!.FullName);
+             // string fileConfigName = "/appsettings.json";
+             //
+             // IConfigurationRoot configuration = new ConfigurationBuilder()
+             //     .SetBasePath(Directory.GetCurrentDirectory())
+             //     .AddJsonFile($"{fileConfigName}",optional:false)
+             //     .Build();
+             // ConnectionString = configuration.GetConnectionString("DataConnection")!;
              
-             IConfigurationRoot configuration = new ConfigurationBuilder()
+             var builder = new ConfigurationBuilder()
                  .SetBasePath(Directory.GetCurrentDirectory())
-                 .AddJsonFile($"{solutionPath}{fileConfigName}",optional:false)
-                 .Build();
-             ConnectionString = configuration.GetConnectionString("DataConnection")!;
+                 .AddJsonFile("Configuration/appsettings.json", optional: false);
+
+             IConfiguration config = builder.Build();
+             ConnectionString = config.GetConnectionString("DataConnection");
+             //ConnectionString = config.GetSection("ConnectionStrings").GetSection("DataConnection").Value;
          }
         
         /*private static AppConfiguration _instance ;

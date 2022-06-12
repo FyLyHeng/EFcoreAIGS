@@ -59,6 +59,16 @@ namespace EFCoreAIGS.Data.Base
             this.repo.Remove(entity);
             _context.SaveChanges();
         }
+        
+        public virtual void SoftDelete(T entity)
+        {
+            if (entity is BaseEntity)
+            {
+                entity.Status = false;
+            }
+            this.repo.Update(entity);
+            _context.SaveChanges();
+        }
 
 
         /**

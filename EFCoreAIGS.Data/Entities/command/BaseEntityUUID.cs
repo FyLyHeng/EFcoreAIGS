@@ -3,10 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFCoreAIGS.Data.Entities.command
 {
-    public abstract class BaseEntity
+    public abstract class BaseEntityUUID
     {
-        [Required]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? LastUpdateDate { get; set; }
         public string? CreateBy { get; set; }

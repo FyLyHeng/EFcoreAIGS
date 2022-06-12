@@ -173,7 +173,7 @@ namespace EFCoreAIGS.UI
             var empWithCredit = repo.Employees
                 .Include(q => q.SpendingDetails)//.ThenInclude(q => q.OutcomeSpend)
                 //.Include(q => q.SpendingDetails)//.ThenInclude(q => q.IncomeSpend)
-                .FirstOrDefault(q => q.Id == id);
+                .FirstOrDefault(q => q.Id == id || q.FirstName !=null || !q.FirstName!.Equals(String.Empty));
 
             return empWithCredit;
         }

@@ -1,4 +1,5 @@
 ﻿#nullable enable
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using EFCoreAIGS.Data.Configuration.EntityConfig;
@@ -14,13 +15,15 @@ namespace EFCoreAIGS.Data.Entities
         [MaxLength(50)]
         public string? FirstName { get; set; }
         
-        [MaxLength(50)]
+        [StringLength(50)]
+        [DefaultValue("default name")]
         public string? LastName { get; set; }
         public DateTime Hired { get; set; }
 
 
         //Not add this field to Table
         [NotMapped]
+        [Range(0,1000)]
         public decimal TotalSpendings { get; set; }
 
         //One-to-One

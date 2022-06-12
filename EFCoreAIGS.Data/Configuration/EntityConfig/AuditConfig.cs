@@ -9,19 +9,32 @@ namespace EFCoreAIGS.Data.Configuration.EntityConfig
         protected AuditConfig (DbContextOptions<AIGSContext> options) : base(options){}
         protected AuditConfig() {}
 
-        //Config Audit Database Add & Update
         public override int SaveChanges()
         {
-            var entity = ChangeTracker.Entries().Where(q => q.State is EntityState.Added or EntityState.Modified);
-
-            foreach (var entry in entity)
+            var changeTracker = ChangeTracker.Entries().Where(q => q.State is EntityState.Added or EntityState.Modified or EntityState.Deleted);
+            foreach (var entry in changeTracker)
             {
-                var audit = (BaseEntity)entry.Entity;
-                audit.LastUpdateDate = DateTime.Now;
-
-                if (entry.State == EntityState.Added)
+                if (entry.Entity is BaseEntity referenceEntity)
                 {
-                    audit.CreatedDate = DateTime.Now;
+                    switch (entry.State)
+                    {
+                        case EntityState.Added:
+                            referenceEntity.CreatedDate = DateTime.Now;
+                            referenceEntity.CreateBy = "CurrentUserLogin";
+                            break;
+
+                        case EntityState.Modified:
+                            referenceEntity.LastUpdateDate = DateTime.Now;
+                            referenceEntity.LastUpdateBy = "CurrentUserLogin";
+                            break;
+                        case EntityState.Deleted:
+                            entry.State = EntityState.Modified;
+                            referenceEntity.Status = false;
+                            
+                            referenceEntity.LastUpdateDate = DateTime.Now;
+                            referenceEntity.LastUpdateBy = "CurrentUserLogin";
+                            break;
+                    }
                 }
             }
             return base.SaveChanges();

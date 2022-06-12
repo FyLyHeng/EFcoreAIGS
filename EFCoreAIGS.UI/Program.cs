@@ -1,46 +1,39 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using System.Runtime.InteropServices;
-using EFCoreAIGS.Data;
-using EFCoreAIGS.Data.Configuration.AppConfig;
+﻿using System.Runtime.InteropServices;
+using EFCore.AIGS.UUID;
+using EFCore.AIGS.UUID.Service;
 using EFCoreAIGS.Data.Service;
-using EFCoreAIGS.erp.Entites;
-using EFCoreAIGS.erp.Service;
-using EFCoreAIGS.UI;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-//
-// IConfigurationRoot conn;
-// DbContextOptionsBuilder<AIGSContext> builder;
-//
-// conn = AppConfiguration.ConnectionString;
-// builder = new DbContextOptionsBuilder<AIGSContext>();
-// builder.UseNpgsql(@$"{conn.GetSection("ConnectionStrings").GetSection("DataConnection")}");
-//
-
-
 
 Console.WriteLine($"{RuntimeInformation.IsOSPlatform(OSPlatform.OSX)} -- Hello Mac");
 
-//new ExecuteLogic().Execute();
-// await new ExecuteLogic().ExecuteAsync();
-// new ExecuteLogicDBRelationship().ExecuteLogic();
+/*new ExecuteLogic().Execute();
+ await new ExecuteLogic().ExecuteAsync();
+ new ExecuteLogicDBRelationship().ExecuteLogic();
 
-//var use = new User {Username = "Core", Password = "123456"};
+var use = new User {Username = "Core", Password = "123456"};
 
-// var auth = new AuthenticateService();
-//auth.Register(use);
-// auth.Login(use);
+ var auth = new AuthenticateService();
+auth.Register(use);
+ auth.Login(use);
 
-// Console.WriteLine($"Current User Login :: {auth.CurrentUserLogin}");
+ Console.WriteLine($"Current User Login :: {auth.CurrentUserLogin}");
+=========== BASE TESTING ==============
+ var a = AppConfiguration.ConnectionString;
 
+ var emp = new EmployeeService();
+ emp.disPlayName();
 
-//=========== BASE TESTING ==============
+ foreach (var employee in emp.GetAll())
+ {
+     Console.WriteLine($"emp : {employee.FirstName}");
+ }*/
 
-var emp = new EmployeeService();
-emp.disPlayName();
+// UUID TESTING
 
-foreach (var employee in emp.GetAll())
+var itemService = new ItemService();
+
+//itemService.Add();
+
+foreach (var item in itemService.All())
 {
-    Console.WriteLine($"emp : {employee.FirstName}");
+    Console.WriteLine($"Full info {item.Name} - {item.ItemGroupId}  {item.ItemGroup.Id}");
 }
