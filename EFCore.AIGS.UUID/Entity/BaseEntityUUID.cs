@@ -18,7 +18,6 @@ namespace EFCore.AIGS.UUID.Entity
         public virtual void Configure(EntityTypeBuilder<TBase> builder)
         {
             builder.Property(q => q.Id).HasDefaultValueSql("gen_random_uuid()");
-
             builder.Property(q => q.Status).HasDefaultValue(true);
         }
     }

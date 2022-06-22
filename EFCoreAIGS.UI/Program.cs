@@ -31,7 +31,7 @@ auth.Register(use);
 
 var itemService = new ItemService();
 
-//itemService.Add();
+itemService.Add();
 
 foreach (var item in itemService.All())
 {

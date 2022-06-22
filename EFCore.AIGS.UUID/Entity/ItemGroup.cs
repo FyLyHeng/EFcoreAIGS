@@ -21,6 +21,15 @@ namespace EFCore.AIGS.UUID.Entity
                 new ItemGroup {Id = Guid.Parse("d40e315c-06ac-4eb4-a66b-e78a8bbdd0d1"), Name = "Drink"},
                 new ItemGroup {Id = Guid.Parse("d40e315c-06ac-4eb4-a66b-e78a8bbdd0d2"), Name = "TEST-1"}
                 );
+            
+            
+            // var itemGroup = new ItemGroup {Id = Guid.Parse("d40e315c-06ac-4eb4-a66b-e78a8bbdd0d3"), Name = "Cake"};
+            //
+            // builder.HasData(itemGroup);
+            // builder.OwnsMany(q => q.Items).HasData(
+            //     new {Id = Guid.Parse("585d99d4-a9b5-4e0a-b271-5d28854879a8"),Name = "HBD cake",ItemGroupId = itemGroup.Id},
+            //     new {Id = Guid.Parse("93f4d1c9-8c0f-406a-8b8c-40ef15178e8b"),Name = "Broken cake",ItemGroupId = itemGroup.Id}
+            // );
         }
     }
 }
