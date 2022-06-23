@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFcoreAIGS.BASE", "EFcoreAI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.AIGS.UUID", "EFCore.AIGS.UUID\EFCore.AIGS.UUID.csproj", "{AC658EDB-9F1F-4DEC-8C73-2098E72B35C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.AIGS.SQLITE", "EFCore.AIGS.SQLITE\EFCore.AIGS.SQLITE.csproj", "{13278EE8-DB7C-4F0E-9F5B-F30E8F3CFB07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AC658EDB-9F1F-4DEC-8C73-2098E72B35C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC658EDB-9F1F-4DEC-8C73-2098E72B35C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC658EDB-9F1F-4DEC-8C73-2098E72B35C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13278EE8-DB7C-4F0E-9F5B-F30E8F3CFB07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13278EE8-DB7C-4F0E-9F5B-F30E8F3CFB07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13278EE8-DB7C-4F0E-9F5B-F30E8F3CFB07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13278EE8-DB7C-4F0E-9F5B-F30E8F3CFB07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

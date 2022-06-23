@@ -1,6 +1,8 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.ComponentModel;
+using System.Runtime.InteropServices;
+using EFCore.AIGS.SQLITE.Entity;
+using EFCore.AIGS.SQLITE.Service;
 using EFCore.AIGS.UUID;
-using EFCore.AIGS.UUID.Service;
 using EFCoreAIGS.Data.Service;
 
 Console.WriteLine($"{RuntimeInformation.IsOSPlatform(OSPlatform.OSX)} -- Hello Mac");
@@ -28,12 +30,17 @@ auth.Register(use);
  }*/
 
 // UUID TESTING
-
-var itemService = new ItemService();
+/*var itemService = new ItemService();
 
 itemService.Add();
 
 foreach (var item in itemService.All())
 {
     Console.WriteLine($"Full info {item.Name} - {item.ItemGroupId}  {item.ItemGroup.Id}");
-}
+}*/
+
+//SQLite
+
+var service = new ItemService();
+service.Add();
+
