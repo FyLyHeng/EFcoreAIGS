@@ -13,6 +13,7 @@
 <!--        <ProjectReference Include="..\EFCoreAIGS.DataScaffold\EFCoreAIGS.DataScaffold.csproj" />-->
         <ProjectReference Include="..\EFCoreAIGS.Data\EFCoreAIGS.Data.csproj" />
         <ProjectReference Include="..\EFCoreAIGS.erp\EFCoreAIGS.erp.csproj" />
+        <ProjectReference Include="..\EFCoreAIGS.SQLITE\EFCore.AIGS.SQLITE.csproj" />
     </ItemGroup>
 
 <!--    <ItemGroup>-->
