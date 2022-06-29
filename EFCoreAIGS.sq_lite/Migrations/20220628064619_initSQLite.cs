@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace EFCore.AIGS.SQLITE.Migrations
+namespace EFCoreAIGS.sq_lite.Migrations
 {
     /// <inheritdoc />
     public partial class initSQLite : Migration
@@ -17,7 +17,7 @@ namespace EFCore.AIGS.SQLITE.Migrations
                 name: "item_group",
                 columns: table => new
                 {
-                    id = table.Column<Guid>(type: "TEXT", nullable: false, defaultValueSql: "date('now')"),
+                    id = table.Column<Guid>(type: "TEXT", nullable: false),
                     name = table.Column<string>(type: "TEXT", nullable: false, defaultValue: "TEST UUID"),
                     status = table.Column<bool>(type: "INTEGER", nullable: false, defaultValue: true)
                 },
@@ -30,7 +30,7 @@ namespace EFCore.AIGS.SQLITE.Migrations
                 name: "item",
                 columns: table => new
                 {
-                    id = table.Column<Guid>(type: "TEXT", nullable: false, defaultValueSql: "date('now')"),
+                    id = table.Column<Guid>(type: "TEXT", nullable: false),
                     name = table.Column<string>(type: "TEXT", nullable: false, defaultValue: "Item TEST"),
                     item_group_id = table.Column<Guid>(type: "TEXT", nullable: true),
                     status = table.Column<bool>(type: "INTEGER", nullable: false, defaultValue: true)

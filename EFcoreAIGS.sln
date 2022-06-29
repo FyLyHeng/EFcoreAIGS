@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore.AIGS.UUID", "EFCore.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreAIGS.sq_lite", "EFCoreAIGS.sq_lite\EFCoreAIGS.sq_lite.csproj", "{554FE312-8ED1-4552-9717-E9F2F347F698}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreAIGS.V7", "EFCoreAIGS.V7\EFCoreAIGS.V7.csproj", "{1EBCE32C-C27D-4E43-850B-E4EB072A011D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{554FE312-8ED1-4552-9717-E9F2F347F698}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{554FE312-8ED1-4552-9717-E9F2F347F698}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{554FE312-8ED1-4552-9717-E9F2F347F698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBCE32C-C27D-4E43-850B-E4EB072A011D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBCE32C-C27D-4E43-850B-E4EB072A011D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBCE32C-C27D-4E43-850B-E4EB072A011D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBCE32C-C27D-4E43-850B-E4EB072A011D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

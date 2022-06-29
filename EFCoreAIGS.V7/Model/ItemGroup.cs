@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EFCoreAIGS.sq_lite.Entity
+namespace EFCoreAIGS.V7.Model
 {
     [EntityTypeConfiguration(typeof(ItemGroupConfig))]
     public class ItemGroup : BaseEntityUUID

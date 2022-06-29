@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
-using EFCore.AIGS.SQLITE.Entity;
-using EFCore.AIGS.SQLITE.Service;
+
 using EFCore.AIGS.UUID;
 using EFCoreAIGS.Data.Service;
+using EFCoreAIGS.V7;
 
 Console.WriteLine($"{RuntimeInformation.IsOSPlatform(OSPlatform.OSX)} -- Hello Mac");
 

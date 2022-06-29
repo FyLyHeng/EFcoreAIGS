@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EFCoreAIGS.sq_lite.Entity
+namespace EFCoreAIGS.V7.Model
 {
     public class BaseEntityUUID
     {

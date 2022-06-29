@@ -63,5 +63,10 @@ namespace EFCoreAIGS.Data.Configuration.AppConfig
                 return _configuration;
             }
         }*/
+
+        public static String getPath()
+        {
+            return Directory.GetCurrentDirectory();
+        }
     }
 }

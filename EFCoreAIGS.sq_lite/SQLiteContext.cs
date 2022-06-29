@@ -1,8 +1,9 @@
 using System.Reflection;
-using EFCore.AIGS.SQLITE.Entity;
+using EFCoreAIGS.sq_lite.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
-namespace EFCore.AIGS.SQLITE
+namespace EFCoreAIGS.sq_lite
 {
     public class SQLiteContext : DbContext
     {
@@ -25,17 +26,19 @@ namespace EFCore.AIGS.SQLITE
                 {
                     options.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName);
                 });
+            
+            optionsBuilder
+                .LogTo(Console.WriteLine, new[] {DbLoggerCategory.Database.Command.Name}, LogLevel.Information)
+                .EnableSensitiveDataLogging();
                 
             
 
             
             optionsBuilder.UseSnakeCaseNamingConvention();
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.HasPostgresExtension("uuid-ossp");
         }
     }
 }
