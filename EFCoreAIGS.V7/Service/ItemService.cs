@@ -1,9 +1,9 @@
 using EFCoreAIGS.V7.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace EFCoreAIGS.V7
+namespace EFCoreAIGS.V7.Service
 {
-    public class ItemService
+    public class ItemService : IItemService
     {
         private static V7Context repo = new V7Context();
         

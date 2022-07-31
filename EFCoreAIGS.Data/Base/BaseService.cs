@@ -6,12 +6,12 @@ namespace EFCoreAIGS.Data.Base
 {
     public class BaseService<T>: IBaseService<T> where T : BaseEntity
     {
-        private readonly AIGSContext _context;
+        public readonly AIGSContext _context;
         public readonly DbSet<T> repo;
         
-        public BaseService()
+        public BaseService(AIGSContext context)
         {
-            _context = new AIGSContext();
+            _context = context;
             repo = _context.Set<T>();
         }
 

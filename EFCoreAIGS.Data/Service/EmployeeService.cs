@@ -3,22 +3,25 @@ using EFCoreAIGS.Data.Entities;
 
 namespace EFCoreAIGS.Data.Service
 {
-    public class EmployeeService : BaseService<Employee>
+    public class EmployeeService : IEmployeeService
     {
-        public void disPlayName()
-        {
-            Console.WriteLine($"^^ {Get(1)!.LastName}");
-        }
 
-        public override List<Employee> GetAll()
+
+        public List<Employee> GetAll()
         {
             Console.WriteLine("Hiiii this is override");
-            return base.GetAll();
+            return new List<Employee>
+            {
+                new Employee{Id = 1, FirstName = "liza"},
+                new Employee{Id = 2, FirstName = "kok"}
+            };
         }
-
-        public void testCase()
+        
+        public string Display()
         {
-         listFilter(employee => employee.FirstName == "liza" || employee.LastName == "");
+            Console.WriteLine("This is apply DI");
+            return "This is apply DI";
         }
+        
     }
 }

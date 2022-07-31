@@ -1,11 +1,34 @@
-﻿using System.ComponentModel;
-using System.Runtime.InteropServices;
-
-using EFCore.AIGS.UUID;
+﻿using System.Runtime.InteropServices;
+using EFCore.AIGS.Infrastructure;
 using EFCoreAIGS.Data.Service;
-using EFCoreAIGS.V7;
+using Microsoft.Extensions.DependencyInjection;
 
 Console.WriteLine($"{RuntimeInformation.IsOSPlatform(OSPlatform.OSX)} -- Hello Mac");
+
+
+
+//Create class for group all the register service at backend-class library
+var serviceProvider = new ServiceCollection()
+ .AddLogging()
+ .AddSingleton<IEmployeeService, EmployeeService>()
+ .BuildServiceProvider();
+
+
+
+
+SyncData.Do1();
+SyncData.Do();
+
+
+
+//var bar = serviceProvider.GetService<IEmployeeService>();
+
+
+
+ //Console.WriteLine($"Here is DI Pro {bar.Display()}");
+
+
+
 
 /*new ExecuteLogic().Execute();
  await new ExecuteLogic().ExecuteAsync();
@@ -41,6 +64,6 @@ foreach (var item in itemService.All())
 
 //SQLite
 
-var service = new ItemService();
-service.Add();
+// var service = new ItemService();
+// service.Add();
 
